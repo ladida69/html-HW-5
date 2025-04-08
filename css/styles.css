@@ -322,14 +322,62 @@ h2 {
   gap: 93px;
   align-items: center;
 }
+.photo-thumb::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+.photo-thumb:hover::before {
+  opacity: 1;
+}
 .photo-thumb {
   position: relative;
 }
+
+.photo-card:hover .photo-thumb::before {
+  transform: translateY(0);
+}
+
 .card-text {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px 63px 24px;
+  transition: opacity 250ms var(--timing-function);
 }
+
+
+.card-text:hover {
+  opacity: 1;
+}
+.card-text p {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 3%;
+  color: rgba(255, 255, 255, 1);
+}
+.foto-card-thumb {
+  position: relative;
+  bottom: 0;
+}
+
+.foto-text {
+  position: absolute;
+}
+
 .nav-list .link {
   position: relative;
 }
@@ -351,7 +399,6 @@ h2 {
   /* opacity: 1; */
   transform: scaleX(1);
 }
-
 
 .filter-buttons {
   display: flex;
@@ -507,6 +554,7 @@ p {
   border-top: none;
   padding: 20px 24px;
   gap: 4px;
+  overflow: hidden;
 }
 
 .footer {
