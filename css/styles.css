@@ -717,3 +717,10 @@ footer {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
+
+.modal-button {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  gap: 6px;
+}
