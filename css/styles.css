@@ -370,11 +370,15 @@ h2 {
 }
 .foto-card-thumb {
   position: relative;
-  bottom: 0;
+  background-color: 
 }
 
 .foto-text {
   position: absolute;
+bottom: 0;
+left: 0;
+
+
 }
 
 .nav-list .link {
@@ -700,14 +704,14 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   background-color: rgba(255, 255, 255, 1);
   top: 50%;
   left: 50%;
@@ -719,8 +723,20 @@ footer {
 }
 
 .modal-button {
+  position: absolute;
+  right: 14px;
+  top: 14px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  height: 30px;
+  width: 30px;
   gap: 6px;
 }
+.modal-button:hover {
+  border: 1px solid var(--accent-hover-color);
+  cursor: pointer;
+}
+
+ 
+ 
